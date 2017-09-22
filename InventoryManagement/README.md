@@ -1,5 +1,10 @@
 # Inventory Management
 
+Author: Alexei Bushuev
+
+Email: alexeib.2017@gmail.com
+
+
 This is a simplified real world problem of inventory management. If not done carefully, race conditions might occurs and therefore the system might report the wrong inventory amount. You are trying to build an error-proof inventory management system.
  
 An Inventory Management Systems would have
