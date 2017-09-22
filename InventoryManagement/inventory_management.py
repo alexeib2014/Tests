@@ -24,7 +24,7 @@ class WareHouse(object):
         :param amount: The amount to decrement.
         """
         if sku not in self.inventory: 
-            # self.inventory[sku] = 0 # we should not add new inventory on decrement procedure
+            # self.inventory[sku] = 0 # we should not add new inventory in decrement procedure
             return False
 
         if self.inventory[sku] < amount:
@@ -133,6 +133,7 @@ class OrderManager(object):
                 order.warehouses[warehouse.get_name()] = amount
                 order_amount -= amount
 
+        # Cancel the order in case not enough inventory in all warehouses
         self.cancel_order(order)
         return False
         
